@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../models/all_expenses_item_model.dart';
 import 'all_expenses_item_header.dart';
 
 class AllExpensesItem extends StatelessWidget {
-  const AllExpensesItem({super.key});
+  final AllExpensesItemModel item;
+  const AllExpensesItem({super.key , required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,9 @@ class AllExpensesItem extends StatelessWidget {
       ),
       child: Column(
         children: [
-          AllExpensesItemHeader(),
+          AllExpensesItemHeader(
+            image: item.image,
+          ),
         ],
       ),
     );

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/all_expenses_item.dart';
 
+import '../models/all_expenses_item_model.dart';
+import '../utils/app_images.dart';
 import '../widgets/all_expenses_header.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -15,12 +18,18 @@ class AllExpenses extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          AllExpensesHeader (),
-          SizedBox(height: 20),
-          Text('No expenses yet'),
+        children: [
+          AllExpensesHeader(),
+          AllExpensesItem(
+            item: AllExpensesItemModel(
+              image: Assets.imagesIncome,
+              title: "Income",
+              price: r"$20",
+              date: "12 Jan 2021",
+            ),
+          ),
         ],
       ),
     );
