@@ -22,6 +22,7 @@ class AllExpenses extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensesHeader(),
+          SizedBox(height: 16),
           AllExpensesItem(
             item: AllExpensesItemModel(
               image: Assets.imagesIncome,
