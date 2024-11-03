@@ -3,20 +3,25 @@ import 'package:responsive_dash_board/widgets/custom_background_container.dart';
 
 import '../section/latest_transaction.dart';
 import 'quick_invoice_header.dart';
+import 'title_text_field.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroundContainer(
-      child: Column(
+    return const CustomBackgroundContainer(
+      child: const Column(
         children: [
           QuickInvoiceHeader(),
           LatestTransaction(),
-           Divider(
-         height: 48,
-        ),
+          Divider(
+            height: 48,
+          ),
+          TitleTextField(
+            title: 'Customer Name',
+            hint: 'Type your customer name',
+          ),
         ],
       ),
     );
