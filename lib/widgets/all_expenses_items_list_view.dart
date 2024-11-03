@@ -42,6 +42,7 @@ class AllExpensesItemsListView extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
             child: AllExpensesItem(
               item: item,
+              isSelected: index == 0,
             ),
           ),
         );
