@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_drawer.dart';
-import '../widgets/quick_invoice.dart';
-import 'all_expenses.dart';
+import 'all_expenses_and_quick_invoice.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -16,17 +15,7 @@ class DashboardDesktopLayout extends StatelessWidget {
       SizedBox(width: 32),
       Expanded(
         flex: 2,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(height: 40),
-              AllExpenses(),
-              SizedBox(height: 24),
-              QuickInvoice(),
-              SizedBox(height: 24),
-            ],
-          ),
-        ),
+        child: AllExpensesAndQuickInvoice(),
       ),
     ]);
   }
