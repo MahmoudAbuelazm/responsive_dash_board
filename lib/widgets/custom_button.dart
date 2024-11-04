@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/text_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  final String title;
+  final Color? backgroundColor, textColor;
+  const CustomButton({super.key, this.backgroundColor, this.textColor, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +16,12 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           elevation: 0,
-          backgroundColor: const Color(0xff4DB7F2),
+          backgroundColor:backgroundColor?? const Color(0xff4DB7F2),
         ),
         onPressed: () {},
-        child: Text('Send Money',
+        child: Text(title,
             style: AppStyles.styleSemiBold18(context)
-                .copyWith(color: Colors.white)),
+                .copyWith(color: textColor?? Colors.white)),
       ),
     );
   }
