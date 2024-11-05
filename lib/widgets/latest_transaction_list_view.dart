@@ -16,7 +16,7 @@ class LatestTransactionListView extends StatelessWidget {
         title: "Lily Smith",
         subtitle: "lilysmith@gmail"),
     UserInfoModel(
-        image: Assets.imagesAvatar3,
+        image: Assets.imagesAvatar1,
         title: "Alex Johnson",
         subtitle: "alexjohnson@gmail"),
   ];
