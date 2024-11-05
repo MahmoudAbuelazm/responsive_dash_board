@@ -21,10 +21,11 @@ class MyCard extends StatelessWidget {
           children: [
             SvgPicture.asset(Assets.imagesCardBackground),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 ListTile(
                   contentPadding:
-                      const EdgeInsets.only(left: 30, right: 42, top: 16),
+                      const EdgeInsets.only(left: 30, right: 42, top: 8),
                   title: Text(
                     "Classic",
                     style: AppStyles.styleRegular16(context)
@@ -37,6 +38,20 @@ class MyCard extends StatelessWidget {
                   ),
                   trailing: SvgPicture.asset(Assets.imagesGallery),
                 ),
+                const Expanded(child: SizedBox()),
+                Padding(
+                  padding: const EdgeInsets.only(right: 24),
+                  child: Text("0918 8124 0042 8129",
+                      style: AppStyles.styleSemiBold24(context).copyWith(
+                          color: Colors.white, fontWeight: FontWeight.w500)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 24),
+                  child: Text("12/20 - 124",
+                      style: AppStyles.styleRegular16(context)
+                          .copyWith(color: Colors.white)),
+                ),
+                const SizedBox(height: 16),
               ],
             )
           ],
