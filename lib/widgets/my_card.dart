@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
+import 'package:responsive_dash_board/utils/text_styles.dart';
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
@@ -16,7 +17,30 @@ class MyCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        child: SvgPicture.asset(Assets.imagesCardBackground),
+        child: Stack(
+          children: [
+            SvgPicture.asset(Assets.imagesCardBackground),
+            Column(
+              children: [
+                ListTile(
+                  contentPadding:
+                      const EdgeInsets.only(left: 30, right: 42, top: 16),
+                  title: Text(
+                    "Classic",
+                    style: AppStyles.styleRegular16(context)
+                        .copyWith(color: Colors.white),
+                  ),
+                  subtitle: Text(
+                    "Debit",
+                    style: AppStyles.styleMedium20(context)
+                        .copyWith(color: Colors.white),
+                  ),
+                  trailing: SvgPicture.asset(Assets.imagesGallery),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
