@@ -17,23 +17,18 @@ class TransactionHistoryListView extends StatelessWidget {
         date: "13 Apr 2022",
         amount: "\$2,000",
         isWithdrawal: false),
-         TransactionModel(
+    TransactionModel(
         title: "Juni Mobile App Project",
         date: "13 Apr 2022",
         amount: "\$2,000",
         isWithdrawal: false),
-
-    
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  ListView.builder(
-      shrinkWrap: true,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return TransactionItem(transaction: items[index]);
-      },
+    return Column(
+      children: items.map((e) => TransactionItem(transaction: e)).toList(),
     );
+    
   }
 }
