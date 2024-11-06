@@ -10,7 +10,7 @@ class AllExpensesAndQuickInvoice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         AllExpenses(),
         SizedBox(height: 24),
