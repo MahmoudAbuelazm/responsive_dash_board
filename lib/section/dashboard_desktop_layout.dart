@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_drawer.dart';
-import '../widgets/transaction_history.dart';
 import 'all_expenses_and_quick_invoice.dart';
+import 'my_card_and_transaction_history.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -19,7 +19,7 @@ class DashboardDesktopLayout extends StatelessWidget {
         child: AllExpensesAndQuickInvoice(),
       ),
       SizedBox(width: 24),
-      Expanded(child: TransactionHistory()),
+      Expanded(child: MyCardAndTransactionHistory()),
     ]);
   }
 }
