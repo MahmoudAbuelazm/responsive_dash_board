@@ -34,23 +34,23 @@ class _IncomeChartState extends State<IncomeChart> {
           PieChartSectionData(
             showTitle: false,
             value: 40,
-            radius: activeIndex == 0 ? 100 : 80,
+            radius: activeIndex == 0 ? 50 : 40,
             color: const Color(0xff208BC7),
           ),
           PieChartSectionData(
             value: 25,
-            radius: activeIndex == 1 ? 100 : 80,
+            radius: activeIndex == 1 ? 50 : 40,
             showTitle: false,
             color: const Color(0xff4Db7F2),
           ),
           PieChartSectionData(
-            radius: activeIndex == 2 ? 100 : 80,
+            radius: activeIndex == 2 ? 50 : 40,
             value: 20,
             showTitle: false,
             color: const Color(0xff064060),
           ),
           PieChartSectionData(
-            radius: activeIndex == 3 ? 100 : 80,
+            radius: activeIndex == 3 ? 50 : 40,
             value: 15,
             showTitle: false,
             color: const Color(0xffE2DECD),
