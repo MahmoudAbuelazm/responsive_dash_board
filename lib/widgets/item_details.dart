@@ -9,11 +9,42 @@ class ItemDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return Padding(
+    //   padding: const EdgeInsets.only(left: 16),
+    //   child: FittedBox(
+    //     fit: BoxFit.scaleDown,
+    //     child: Row(
+    //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    //       children: [
+    //         Container(
+    //           width: 12,
+    //           height: 12,
+    //           decoration: ShapeDecoration(
+    //             shape: const OvalBorder(),
+    //             color: itemDetails.color,
+    //           ),
+    //         ),
+    //         SizedBox(width: 12),
+    //         Text(
+    //           itemDetails.title,
+    //           style: AppStyles.styleRegular16(context),
+    //         ),
+    //         SizedBox(width: 24),
+    //         Text(
+    //           itemDetails.value,
+    //           style: AppStyles.styleMedium16(context).copyWith(
+    //             color: const Color(0xff208cc8),
+    //           ),
+    //         ),
+    //       ],
+    //     ),
+    //   ),
+    // );
     return ListTile(
       leading: Container(
         width: 12,
         height: 12,
-        decoration:  ShapeDecoration(
+        decoration: ShapeDecoration(
           shape: const OvalBorder(),
           color: itemDetails.color,
         ),
