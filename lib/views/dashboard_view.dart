@@ -5,6 +5,7 @@ import 'package:responsive_dash_board/widgets/custom_drawer.dart';
 import '../section/dashboard_desktop_layout.dart';
 import '../section/dashboard_mobile_layout.dart';
 import '../section/dashboard_tablet_layout.dart';
+import '../utils/size_config.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({super.key});
@@ -17,23 +18,25 @@ class _DashboardViewState extends State<DashboardView> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold(
       key: scaffoldKey,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? AppBar(
               elevation: 0,
               backgroundColor: const Color(0xffFAFAFA),
               leading: IconButton(
                 onPressed: () {
-                scaffoldKey.currentState!.openDrawer();  
+                  scaffoldKey.currentState!.openDrawer();
                 },
                 icon: const Icon(
                   Icons.menu,
                 ),
               ))
           : null,
-      drawer:
-          MediaQuery.sizeOf(context).width < 800 ? const CustomDrawer() : null,
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
+          ? const CustomDrawer()
+          : null,
       backgroundColor: const Color(0xffF7F9FA),
       body: AdaptiveLayout(
           mobileLayout: (context) => const DashboardMobileLayout(),
