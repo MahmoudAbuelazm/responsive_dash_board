@@ -1,6 +1,5 @@
 
 
-import 'package:flutter/material.dart';
 
 class SizeConfig {
   static double desktop = 1200;
