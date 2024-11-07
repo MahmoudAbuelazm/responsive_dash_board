@@ -10,8 +10,8 @@ class IncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizeConfig.screenWidth >= SizeConfig.desktop &&
-            SizeConfig.screenWidth < 1750
+    double width = MediaQuery.sizeOf(context).width;
+    return width >= SizeConfig.desktop && width < 1750
         ? const SizedBox()
         : const CustomBackgroundContainer(
             child: Column(
