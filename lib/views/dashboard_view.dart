@@ -18,7 +18,7 @@ class _DashboardViewState extends State<DashboardView> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    SizeConfig.init(context);
+    // SizeConfig.init(context);
     return Scaffold(
       key: scaffoldKey,
       appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
