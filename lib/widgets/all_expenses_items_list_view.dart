@@ -15,17 +15,18 @@ class AllExpensesItemsListView extends StatefulWidget {
     AllExpensesItemModel(
         image: Assets.imagesIncome,
         title: "Income",
-        price: r"$20",
+        price: r"$10,032",
         date: "Jan 2021"),
     AllExpensesItemModel(
         image: Assets.imagesExpenses,
         title: "Expense",
-        price: r"$20",
+        price: r"$5,052",
         date: "Jan 2021"),
   ];
 
   @override
-  State<AllExpensesItemsListView> createState() => _AllExpensesItemsListViewState();
+  State<AllExpensesItemsListView> createState() =>
+      _AllExpensesItemsListViewState();
 }
 
 class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
@@ -33,7 +34,6 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-     
       children: AllExpensesItemsListView.items.asMap().entries.map((e) {
         final index = e.key;
         final item = e.value;

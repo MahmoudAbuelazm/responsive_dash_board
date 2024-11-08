@@ -6,7 +6,7 @@ import 'all_expenses_item_header.dart';
 
 class InActiveAllExpensesItem extends StatelessWidget {
   final AllExpensesItemModel item;
-  const InActiveAllExpensesItem({super.key,required this.item});
+  const InActiveAllExpensesItem({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -35,15 +35,14 @@ class InActiveAllExpensesItem extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            item.price,
+            item.date,
             style: AppStyles.styleRegular14(context),
           ),
           const SizedBox(height: 16),
           Text(
-            item.date,
+            item.price,
             style: AppStyles.styleSemiBold24(context),
           ),
-
         ],
       ),
     );

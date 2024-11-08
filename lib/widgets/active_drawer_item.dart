@@ -20,6 +20,7 @@ class ActiveDrawerItem extends StatelessWidget {
       ),
       title: FittedBox(
         fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
         child: Text(
           item.title,
           style: AppStyles.styleBold16(context),

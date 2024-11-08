@@ -35,14 +35,14 @@ class ActiveAllExpensesItem extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            item.price,
+           item.date,
             style: AppStyles.styleRegular14(context).copyWith(
               color: const Color(0xffFAFAFA),
             ),
           ),
           const SizedBox(height: 16),
           Text(
-            item.date,
+            item.price ,
             style: AppStyles.styleSemiBold24(context).copyWith(
               color: Colors.white,
             ),
