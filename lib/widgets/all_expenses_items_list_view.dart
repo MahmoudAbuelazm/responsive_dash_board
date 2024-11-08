@@ -33,27 +33,48 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: AllExpensesItemsListView.items.asMap().entries.map((e) {
-        final index = e.key;
-        final item = e.value;
-        return Expanded(
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                selectedIndex = index;
-              });
-            },
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: AllExpensesItem(
-                item: item,
-                isSelected: index == selectedIndex,
-              ),
-            ),
+    return Row(children: [
+      Expanded(
+        child: GestureDetector(
+          onTap: () {
+            setState(() {
+              selectedIndex = 0;
+            });
+          },
+          child: AllExpensesItem(
+            item: AllExpensesItemsListView.items[0],
+            isSelected: 0 == selectedIndex,
           ),
-        );
-      }).toList(),
-    );
+        ),
+      ),
+      const SizedBox(width: 8),
+      Expanded(
+        child: GestureDetector(
+          onTap: () {
+            setState(() {
+              selectedIndex = 1;
+            });
+          },
+          child: AllExpensesItem(
+            item: AllExpensesItemsListView.items[1],
+            isSelected: 1 == selectedIndex,
+          ),
+        ),
+      ),
+      const SizedBox(width: 8),
+      Expanded(
+        child: GestureDetector(
+          onTap: () {
+            setState(() {
+              selectedIndex = 2;
+            });
+          },
+          child: AllExpensesItem(
+            item: AllExpensesItemsListView.items[2],
+            isSelected: 2 == selectedIndex,
+          ),
+        ),
+      )
+    ]);
   }
 }
