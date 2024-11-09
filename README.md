@@ -30,6 +30,14 @@
  - Learn how to enhance user experience by incorporating animations. This section covers the use of Flutter’s animation libraries to create smooth transitions, interactive elements, and engaging visual effects that make your dashboard more dynamic and user-friendly.
 
 ###  ⭐ System Design 
+# System design
+    ├── lib
+    │   ├── models
+    │   ├── sections
+    │   ├── utils
+    │   ├── views
+    │   ├── widgets
+    │   ├── main.dart
 
 ###  🎨 Demo 
 
