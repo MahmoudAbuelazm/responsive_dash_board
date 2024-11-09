@@ -1,7 +1,9 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_drawer.dart';
-import 'all_expenses_and_quick_invoice.dart';
+import '../widgets/quick_invoice.dart';
+import 'all_expenses.dart';
 import 'income_section.dart';
 import 'my_card_and_transaction_history.dart';
 
@@ -10,11 +12,11 @@ class DashboardDesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(children: [
+    return Row(children: [
       Expanded(
-        child: CustomDrawer(),
+        child: FadeInLeft(child: const CustomDrawer()),
       ),
-      SizedBox(width: 32),
+      const SizedBox(width: 32),
       Expanded(
           flex: 3,
           child: CustomScrollView(
@@ -26,19 +28,28 @@ class DashboardDesktopLayout extends StatelessWidget {
                     Expanded(
                       flex: 2,
                       child: Padding(
-                        padding: EdgeInsets.only(top: 40),
-                        child: AllExpensesAndQuickInvoice(),
+                        padding: const EdgeInsets.only(top: 40),
+                        child: Column(
+                          children: [
+                            FadeInDown(child: const AllExpenses()),
+                            const SizedBox(height: 24),
+                            FadeInUp(child: const QuickInvoice()),
+                            const SizedBox(height: 24),
+                          ],
+                        ),
                       ),
                     ),
-                    SizedBox(width: 24),
+                    const SizedBox(width: 24),
                     Expanded(
-                        child: Column(
-                      children: [
-                        SizedBox(height: 40),
-                        MyCardAndTransactionHistory(),
-                        SizedBox(height: 24),
-                        Expanded(child: IncomeSection()),
-                      ],
+                        child: FadeInRight(
+                      child: const Column(
+                        children: [
+                          SizedBox(height: 40),
+                          MyCardAndTransactionHistory(),
+                          SizedBox(height: 24),
+                          Expanded(child: IncomeSection()),
+                        ],
+                      ),
                     )),
                   ],
                 ),
