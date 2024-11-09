@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/section/adaptive_layout.dart';
+import 'package:responsive_dash_board/sections/adaptive_layout.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
 
-import '../section/dashboard_desktop_layout.dart';
-import '../section/dashboard_mobile_layout.dart';
-import '../section/dashboard_tablet_layout.dart';
+import '../sections/dashboard_desktop_layout.dart';
+import '../sections/dashboard_mobile_layout.dart';
+import '../sections/dashboard_tablet_layout.dart';
 import '../utils/size_config.dart';
 
 class DashboardView extends StatefulWidget {

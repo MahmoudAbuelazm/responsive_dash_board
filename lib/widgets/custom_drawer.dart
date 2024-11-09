@@ -4,7 +4,7 @@ import 'package:responsive_dash_board/models/user_info_model.dart';
 import 'package:responsive_dash_board/widgets/in_active_drawer_item.dart';
 import 'package:responsive_dash_board/widgets/user_info_list_tile.dart';
 
-import '../section/drawer_items_list_view.dart';
+import '../sections/drawer_items_list_view.dart';
 import '../utils/app_images.dart';
 
 class CustomDrawer extends StatelessWidget {
