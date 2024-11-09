@@ -1,29 +1,42 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_drawer.dart';
-import 'dashboard_mobile_layout.dart';
+import 'all_expenses_and_quick_invoice.dart';
+import 'income_section.dart';
+import 'my_card_and_transaction_history.dart';
 
 class DashboardTabletLayout extends StatelessWidget {
   const DashboardTabletLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         Expanded(
-          child: CustomDrawer(),
+          child: FadeInLeft(child: const CustomDrawer()),
         ),
-        SizedBox(width: 32),
+        const SizedBox(width: 32),
         Expanded(
           flex: 3,
-          child: Padding(
-            padding: EdgeInsets.only(
-              top: 40
+          child: FadeInRight(
+            child: const Padding(
+              padding: EdgeInsets.only(top: 40),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    AllExpensesAndQuickInvoice(),
+                    SizedBox(height: 24),
+                    MyCardAndTransactionHistory(),
+                    SizedBox(height: 24),
+                    IncomeSection(),
+                  ],
+                ),
+              ),
             ),
-            child: DashboardMobileLayout(),
           ),
         ),
-        SizedBox(width: 32),
+        const SizedBox(width: 32),
       ],
     );
   }
