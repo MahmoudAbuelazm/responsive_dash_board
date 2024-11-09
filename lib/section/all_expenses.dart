@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import '../widgets/all_expenses_header.dart';
 import '../widgets/all_expenses_items_list_view.dart';
@@ -8,16 +9,17 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBackgroundContainer(
-      
+    return CustomBackgroundContainer(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AllExpensesHeader(
+          const AllExpensesHeader(
             title: "All Expenses",
           ),
-          SizedBox(height: 16),
-          AllExpensesItemsListView()
+          const SizedBox(height: 16),
+          FadeInRight(
+            delay: const Duration(milliseconds: 500),
+            child: const AllExpensesItemsListView())
         ],
       ),
     );

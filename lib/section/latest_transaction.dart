@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/text_styles.dart';
 
@@ -11,12 +12,16 @@ class LatestTransaction extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Latest Transaction',
-          style: AppStyles.styleMedium16(context),
+        FadeInLeft(
+          child: Text(
+            'Latest Transaction',
+            style: AppStyles.styleMedium16(context),
+          ),
         ),
         const SizedBox(height: 16),
-        const LatestTransactionListView()
+        FadeInRight(
+            delay: const Duration(milliseconds: 500),
+            child: const LatestTransactionListView())
       ],
     );
   }
